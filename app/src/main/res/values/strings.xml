@@ -2,23 +2,23 @@
     <string name="app_name">Firebase Auth</string>
 
     <!--activity_login.xml-->
-    <string name="tv_login">Login</string>
+    <string name="tv_login">LOGIN</string>
     <string name="et_email_address_hint">Email Address</string>
     <string name="et_password_hint">Password</string>
-    <string name="btn_login">Login</string>
-    <string name="btn_create_account">Create Account</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_create_account">CREATE ACCOUNT</string>
 
     <!--activity_signup.xml-->
-    <string name="tv_create_account">Create Account</string>
+    <string name="tv_create_account">CREATE ACCOUNT</string>
     <string name="et_email_address_hint_signup">Email Address</string>
     <string name="et_password_hint_signup">Password</string>
-    <string name="btn_signup">Signup</string>
-    <string name="btn_login_signup">Login</string>
+    <string name="btn_signup">SIGNUP</string>
+    <string name="btn_login_signup">LOGIN</string>
 
     <!--activity_profile_page.xml-->
     <string name="tv_title">Tap On Image to Select Profile Picture</string>
     <string name="et_display_name_hint">Enter Display Name</string>
     <string name="tv_verified">Verified</string>
-    <string name="btn_save">Save</string>
-    <string name="btn_logout">Logout</string>
+    <string name="btn_save">SAVE</string>
+    <string name="btn_logout">LOGOUT</string>
 </resources>

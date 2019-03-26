@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,7 +55,6 @@ public class Login extends AppCompatActivity {
         btnCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
                 startActivity(new Intent(Login.this,Signup.class));
             }
         });
@@ -85,29 +85,32 @@ public class Login extends AppCompatActivity {
             edEmail.setError("Email Required");
             edEmail.requestFocus();
 //            Toast.makeText(this,R.string.email_req,Toast.LENGTH_SHORT).show();
-        }
-        else if (password.isEmpty()){
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+
+            pgLogin.dismiss();
+
+            edEmail.setError("Invalid Email Address");
+            edEmail.requestFocus();
+
+        } else if (password.isEmpty()) {
             pgLogin.dismiss();
 
             edPassword.setError("Password Required!");
             edPassword.requestFocus();
 //            Toast.makeText(this,R.string.password_req,Toast.LENGTH_SHORT).show();
-        }
-        else
-        {
-            dAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        } else {
+            dAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     pgLogin.dismiss();
-                    if (task.isSuccessful()){
+                    if (task.isSuccessful()) {
                         finish();
-                        Intent intProfile = new Intent(Login.this,ProfilePage.class);
+                        Intent intProfile = new Intent(Login.this, ProfilePage.class);
                         intProfile.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intProfile);
-                    }
-                    else{
-
-                        Toast.makeText(Login.this,task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(Login.this, "Invalid Credentials", Toast.LENGTH_LONG);
+                        Toast.makeText(Login.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                     }
                 }
             });

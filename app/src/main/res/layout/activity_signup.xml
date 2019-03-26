@@ -34,7 +34,7 @@
         android:padding="5dp"
         android:text="@string/tv_create_account"
         android:textColor="#ffffff"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,9 +88,8 @@
         android:background="@drawable/button_style"
         android:padding="5dp"
         android:text="@string/btn_signup"
-        android:textAllCaps="false"
         android:textColor="#ffffff"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etAuthPassword" />
@@ -105,7 +104,7 @@
         android:gravity="center"
         android:text="OR"
         android:textColor="#ffffff"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSignup" />
@@ -120,10 +119,10 @@
         android:background="@drawable/button_style"
         android:padding="5dp"
         android:text="@string/btn_login_signup"
-        android:textAllCaps="false"
         android:textColor="#ffffff"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
 </android.support.constraint.ConstraintLayout>
