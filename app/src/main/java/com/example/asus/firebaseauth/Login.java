@@ -109,7 +109,6 @@ public class Login extends AppCompatActivity {
                         intProfile.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intProfile);
                     } else {
-                        Toast.makeText(Login.this, "Invalid Credentials", Toast.LENGTH_LONG);
                         Toast.makeText(Login.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                     }
                 }
